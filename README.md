@@ -5,7 +5,7 @@ Home: https://github.com/wbond/oscrypto
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Compiler-free Python crypto library backed by the OS, supporting CPython and PyPy
 
