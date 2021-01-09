@@ -1,5 +1,5 @@
 {% set name = "oscrypto" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 
 package:
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2f53f50813ecc5114fd126b89766fabdb9448e0bb080814451cc4bb92acafca4
+  sha256: 7d2cca6235d89d1af6eb9cfcd4d2c0cb405849868157b2f7b278beb644d48694
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Compiler-free Python crypto library backed by the OS, supporting CPython and PyPy'
+  summary: Compiler-free Python crypto library backed by the OS, supporting CPython and PyPy
 
   description: |
     A compilation-free, always up-to-date encryption library for Python
