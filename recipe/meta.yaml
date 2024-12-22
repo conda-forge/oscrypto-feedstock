@@ -7,25 +7,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7d2cca6235d89d1af6eb9cfcd4d2c0cb405849868157b2f7b278beb644d48694
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - asn1crypto >=1.0.0
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - oscrypto
   commands:
